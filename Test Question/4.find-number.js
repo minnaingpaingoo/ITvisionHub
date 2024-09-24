@@ -9,9 +9,6 @@ function find(num) {
     let length = number.length;
     let mid = length/2;
     console.log(mid);
-    for(let i=0; i<number.length; i++){
-
-    }
 }
 
 console.log("Is 10 exist in an array? Answer is", find(10));
