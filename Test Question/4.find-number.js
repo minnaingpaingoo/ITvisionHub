@@ -15,4 +15,5 @@ function binarySearch(arr, findingNumber, low, high) {
         return binarySearch(arr, findingNumber, mid + 1, high);
 }
 var number = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13];
-console.log("The finding number 10 is at the index of", binarySearch(number, 14, 0, number.length - 1));
+var findingNumber = 10;
+console.log("The finding number",findingNumber,"is at the index of", binarySearch(number, findingNumber, 0, number.length - 1));
