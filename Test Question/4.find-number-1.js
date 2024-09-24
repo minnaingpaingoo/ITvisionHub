@@ -25,7 +25,7 @@ function find(findingNumber) {
         if(element === findingNumber)
             findingIndex = index; 
     });
-    return targetIndex;
+    return findingIndex;
 }
 
 var findingNumber = 10;
