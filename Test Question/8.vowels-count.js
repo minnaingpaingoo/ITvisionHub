@@ -2,7 +2,7 @@
  * var str = "Hello, Nice to meet you"
  * vowels count
  */
-var str = "Hello, Nice to meet you";
+var str = "Hello, Nice to meet you.";
 var vowels = {
     'a': true, 'e': true, 'i': true, 'o': true, 'u': true,
     'A': true, 'E': true, 'I': true, 'O': true, 'U': true
