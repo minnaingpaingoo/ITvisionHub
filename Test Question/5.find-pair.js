@@ -13,11 +13,11 @@ let count = 0;
 for (let i = 0; i < number.length; i++) {
     let pointer = number[i];
     if (seen[pointer]) {
-        resultArr.push([pointer,pointer]);
+        resultArr.push([pointer, pointer]);
         count++;
     }
     else
-        seen[pointer] = true; 
-}                           
+        seen[pointer] = true;
+}
 console.log("Number of pairs =", count);
 console.log("The same number pairs are", resultArr);
