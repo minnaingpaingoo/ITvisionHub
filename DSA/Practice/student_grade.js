@@ -1,3 +1,13 @@
+/*We have an array of objects representing students, and each student has:
+
+A name
+An array of grades
+We want to calculate:
+
+The average grade for each student.
+Identify if the student has passed or failed based on their average grade (pass mark is 50).
+Group students into two categories: "Passed" and "Failed." */
+
 let students = [
     { name: 'Alic', grades: [85, 78, 92, 88] },
     { name: 'Bob', grades: [45, 58, 60, 48] },
