@@ -49,3 +49,20 @@ employee.project.forEach((proj) => {
     });
 });
 console.log("---------------------------------------");
+
+// Swap Employee1 and Employee2's projects
+const employee1 = company.employees[0];
+const employee2 = company.employees[1];
+
+[employee1.project, employee2.project] = [employee2.project, employee1.project];
+
+company.employees.forEach((employee) => {
+    console.log(`These are ${employee.name}'s projects:`);
+
+employee.project.forEach((proj) => {
+        console.log(`  - ${proj.projectName}: ${proj.projectDesc}`);
+    });
+});
+console.log("---------------------------------------");
+
+

@@ -71,6 +71,32 @@ class Company{
         }
     }
 
+    // Add a new employee
+    addEmployee(employee) {
+        this._employees.push(employee);
+    }
+
+    // Update employee information
+    updateEmployee(employeeName, updatedInfo) {
+        const employee = this._employees.find(emp => emp.name === employeeName);
+        if (employee) {
+            Object.assign(employee, updatedInfo);
+        } else {
+            console.log(`Employee ${employeeName} not found.`);
+        }
+    }
+
+    // Delete an employee
+    deleteEmployee(employeeName) {
+        const employeeIndex = this._employees.findIndex(emp => emp.name === employeeName);
+        if (employeeIndex !== -1) {
+            this._employees.splice(employeeIndex, 1);
+        } else {
+            console.log(`Employee ${employeeName} not found.`);
+        }
+    }
+    
+
 }
 
 function displayEachEmpProject(){
@@ -122,3 +148,16 @@ company.updateProject("Employee1","Project1", { projectName: "Project6", project
 console.log("After updating Project1 from Employee1, the result is:")
 displayEachEmpProject();
 
+// Add a new employee
+company.addEmployee({ name: "Employee3", projects: [], salary: 400 });
+console.log("After Adding Employee3:");
+displayEachEmpProject();
+
+// Update Employee2's salary
+company.updateEmployee("Employee2", { salary: 500 });
+console.log("After Updating Employee2's salary:", company.employees);
+
+// Delete Employee1
+company.deleteEmployee("Employee1");
+console.log("After Deleting Employee1:");
+displayEachEmpProject(company);
