@@ -73,8 +73,10 @@ each element with the width of the tree at each level  */
 */
 function getTreeLevelWidth(root) {
     let counter = [0];
+    //For 's' is looping in the array, so use arr.length>1 instead of arr.length>0 
+    // because it works at least 2 index in the array
     let arr = [root, 's'];
-    while (arr.length > 1) { //For 's' is looping in the array, so use arr.length>1 instead of arr.length>0 because it works at least 2 index in the array
+    while (arr.length > 1) { 
         let node = arr.shift();
         if (node === 's') {
             arr.push('s');
